@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en_us" ng-app="MainApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- 提升为HTTPS级别 -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Loading...</title>
+
+    <!--样式处理[公共]-->
+    <link rel="stylesheet"  href="common/angular-material/angular-material.min.css" />
+
+    <!--公共JS[内置]-->
+    <script src="common/jquery/jquery.min.js"></script>
+    <script src="common/jquery/jquery.json-2.4.js"></script>
+    <script src="common/engine.io.client/engine.io.js"></script>
+    <script src="common/hammerjs/hammer.min.js"></script>
+
+    <script src="common/angular/angular.min.js"></script>
+    <script src="common/angular/angular-animate.min.js"></script>
+    <script src="common/angular/angular-aria.min.js"></script>
+    <script src="common/angular/angular-cookies.min.js"></script>
+
+    <script src="common/angular-material/angular-material.min.js"></script>
+
+    <!--国际化-->
+    <script src="common/angular-translate/angular-translate.min.js"></script>
+    <script src="common/angular-translate/service/default-interpolation.js"></script>
+    <script src="common/angular-translate/service/handler-log.js"></script>
+    <script src="common/angular-translate/service/loader-static-files.js"></script>
+    <script src="common/angular-translate/service/loader-partial.js"></script>
+    <script src="common/angular-translate/service/loader-url.js"></script>
+    <script src="common/angular-translate/service/storage-key.js"></script>
+    <script src="common/angular-translate/service/storage-local.js"></script>
+    <script src="common/angular-translate/service/storage-cookie.js"></script>
+    <script src="common/angular-translate/service/translationCache.js"></script>
+
+    <!--App样式处理-->
+    <link rel="stylesheet"  href="styles/ui.css" />
+    <!--App引用JS 非Mini方式-->
+    <script src="js/util.js"></script>
+    <script src="js/bs.js"></script>
+    <script src="js/plugins/im.js"></script>
+    <script src="js/ui/ui_constant.js"></script>
+    <script src="js/ui/ui_common.js"></script>
+    <script src="js/ui/ui_plugins_def.js"></script>
+    <script src="js/ui/ui_plugins_data.js"></script>
+    <script src="js/ui/ui.js"></script>
+
+</head>
+
+<body>
+
+<div class="k-content-frame" ng-controller="AppCtrl">
+    <div class="middle">
+        <div class="app-info">
+            <h1>{{ 'AppTitle' | translate }}</h1>
+            <p>{{ 'AppDescription' | translate }} </p>
+        </div>
+        <div class="app-content">
+            <div class="app-content-left">
+                <div class="content-fixed" layout="column" layout-align="center center">
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center end">
+                        <img src="images/logo_64.png" />
+                    </section>
+                    <section layout="vertical" layout-sm="horizontal" layout-align="center end">
+                        <select ng-model="uiLanguage" ng-change="uiLanguageChange(uiLanguage)" ng-options="k as v for (k, v) in uiLanguageList"></select>
+                    </section>
+                </div>
+            </div>
+            <div class="app-content-right">
+                <div class="content">
+                    <!--Title-->
+                    <label for="input-path" id="label-input">
+                        <span>{{'labelMovie' | translate}}</span>{{ 'spanMovie' | translate }}
+                    </label>
+                    <input id="input-path" ng-model="ddInputPath"/>
+
+
+                    <!--Language-->
+                    <label for="input-language" id="label-language">
+                        <span>{{'labelLanguage' | translate}}</span>{{ 'spanLanguage' | translate }}
+                    </label>
+                    <select id="input-language" ng-model="ddLanguage" ng-change="languageChange(ddLanguage)" ng-options="k as v for (k, v) in languageList"></select>
+
+                    <!--Output-->
+                    <label for="input-outpath" id="label-outpath">
+                        <span>{{'labelOutPath' | translate}}</span>{{ 'spanOutPath' | translate }}
+                    </label>
+                    <input id="input-outpath" ng-model="ddOutputPath"/>
+
+                    <!--Btn-->
+                    <md-button id="btn-select" class="md-raised" ng-click="onSelectDir()">...</md-button>
+
+
+                </div>
+                <div class="controls-bar" layout="row" layout-align="center end">
+                    <md-content>
+                        <section layout="vertical" layout-sm="horizontal" layout-align="center end">
+                            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+                        </section>
+
+                        <section layout="vertical" layout-sm="horizontal" layout-align="center end">
+                            <md-button id="btn-processDir" class="md-raised md-warn" ng-click="onDownloadClick()">{{'btn-process' | translate}}</md-button>
+                        </section>
+                    </md-content>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    window.UI.c$.launch();
+</script>
+</body>
+</html>

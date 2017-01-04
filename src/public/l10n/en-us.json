@@ -1,0 +1,15 @@
+{
+	"AppTitle":"SRT2",
+	"AppDescription": "Download movie/video subtitles(.srt)",
+	"labelMovie":"Movie/Video Title:",
+	"spanMovie":" (eg. The.Big.Bang.Theory)",
+	"labelLanguage":"Language:",
+	"spanLanguage":" (Subtitle Language)",
+	"labelOutPath":"Output:",
+	"spanOutPath":" (save .srt file in this directory)",
+	"btn-process": "Download",
+	"msg-check-movieName":"Please enter a valid movie/video name.",
+	"msg-check-srtLanguage":"Please select the appropriate subtitle language.",
+	"msg-download-success":"Movie/Video '{{movieName}}' subtitle file is downloaded successfully!",
+	"msg-download-failed":"Movie/Video '{{movieName}}' subtitle file is not found!"
+}

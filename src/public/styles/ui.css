@@ -1,0 +1,103 @@
+body {
+  max-width: 680px;
+  max-height: 420px;
+  background-color: #ECECEC;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 300;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.k-content-frame {
+  padding: 4px;
+}
+.middle {
+  width: 100%;
+  height: 360px;
+  margin-top: -20px;
+}
+.middle .app-info {
+  width: 100%;
+  height: 30%;
+  background-image: url('../images/bg.png');
+  color: #ffffff;
+}
+.middle .app-info h1,
+.middle .app-info p {
+  margin-left: 7%;
+}
+.middle .app-info h1 {
+  padding: 4px 0px;
+}
+.middle .app-content {
+  width: 100%;
+  height: 70%;
+  margin-top: 4px;
+}
+.middle .app-content .app-content-left {
+  float: left;
+  height: 100%;
+  width: 29%;
+  border-right: 1px dashed #9CA6A4;
+}
+.middle .app-content .app-content-left .content-fixed {
+  width: 100%;
+  height: 100%;
+}
+.middle .app-content .app-content-left .content-fixed img {
+  width: 100%;
+}
+.middle .app-content .app-content-right {
+  float: right;
+  height: 100%;
+  width: 70%;
+}
+.middle .app-content .app-content-right .content {
+  height: 70%;
+  padding: 8px;
+}
+.middle .app-content .app-content-right .content label {
+  display: block;
+  font-size: 9px;
+}
+.middle .app-content .app-content-right .content label span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.middle .app-content .app-content-right .content input,
+.middle .app-content .app-content-right .content select {
+  margin: 8px 0px;
+  width: 90%;
+}
+.middle .app-content .app-content-right .content select {
+  height: 22px;
+  line-height: 18px;
+}
+.middle .app-content .app-content-right .content #input-language {
+  font-family: consolas, "courier new", monospace;
+}
+.middle .app-content .app-content-right .controls-bar md-content {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+.middle .app-content .app-content-right .controls-bar md-content section {
+  padding: 16px;
+}
+.middle .app-content .app-content-right .controls-bar md-content section md-progress-linear {
+  width: 100%;
+  opacity: 0;
+}
+.middle .app-content .app-content-right .controls-bar md-content section .md-button {
+  text-transform: capitalize;
+}

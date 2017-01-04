@@ -1,0 +1,15 @@
+{
+	"AppTitle":"SRT2",
+	"AppDescription": "快速下載電影/視頻字幕(.srt)",
+	"labelMovie":"電影/視頻名稱:",
+	"spanMovie":" (例如. The.Big.Bang.Theory)",
+	"labelLanguage":"字幕語言:",
+	"spanLanguage":" (例如：選擇English) 參見：WiKi 'ISO_639-3' 的說明",
+	"labelOutPath":"輸出目錄:",
+	"spanOutPath":" (保存.srt 文件在輸出目錄中)",
+	"btn-process": "下載",
+	"msg-check-movieName":"請輸入合法的電影/視頻名稱.",
+	"msg-check-srtLanguage":"請選擇合適的字幕語言.",
+	"msg-download-success":"電影/視頻'{{movieName}}' 字幕文件下載成功!",
+	"msg-download-failed":"電影/視頻'{{movieName}}' 字幕文件沒有找到!"
+}

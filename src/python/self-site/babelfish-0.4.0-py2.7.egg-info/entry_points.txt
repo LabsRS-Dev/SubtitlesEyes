@@ -1,0 +1,12 @@
+[babelfish.country_converters]
+name = babelfish.converters.countryname:CountryNameConverter
+
+[babelfish.language_converters]
+alpha2 = babelfish.converters.alpha2:Alpha2Converter
+alpha3b = babelfish.converters.alpha3b:Alpha3BConverter
+alpha3t = babelfish.converters.alpha3t:Alpha3TConverter
+name = babelfish.converters.name:NameConverter
+opensubtitles = babelfish.converters.opensubtitles:OpenSubtitlesConverter
+scope = babelfish.converters.scope:ScopeConverter
+type = babelfish.converters.type:LanguageTypeConverter
+

@@ -1,0 +1,8 @@
+
+1.windows平台：
+pip install --install-option="--install-lib=D:\workspace\testprj\0git_html\SubtitlesEyes\python\self-site" subliminal
+
+或者：
+
+2.mac 平台
+
